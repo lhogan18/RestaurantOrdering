@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FoodList"></activity>
+        <activity android:name=".activity_cart"></activity>
+        <activity android:name=".FoodList" />
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"
@@ -24,12 +25,11 @@
         <activity
             android:name=".SignIn"
             android:label="SignIn"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SignUp"
             android:label="SignUp"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
