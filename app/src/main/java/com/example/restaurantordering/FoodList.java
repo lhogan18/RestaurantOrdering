@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Layout;
 import android.util.Log;
@@ -72,7 +73,11 @@ public class FoodList extends AppCompatActivity {
                 holder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(FoodList.this, ""+local.getName(), Toast.LENGTH_SHORT).show();
+                        //new activity
+                        Intent foodDetails = new Intent(FoodList.this, FoodDetails.class);
+                        foodDetails.putExtra("FoodId", adapter.getRef(position).getKey()); //Send food id to new activity
+                        startActivity(foodDetails);
+
                     }
                 });
             }
