@@ -127,8 +127,6 @@ public class Home extends AppCompatActivity {
         adapter.startListening();
         recyclermenu.setAdapter(adapter);
     }
-        
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
