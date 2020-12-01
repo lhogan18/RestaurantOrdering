@@ -11,6 +11,8 @@ android {
         versionCode 1
         versionName "1.0"
 
+        vectorDrawables.useSupportLibrary = true
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -18,9 +20,16 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            lintOptions{
+            disable 'MissingTranslation'
+            checkReleaseBuilds false
+            abortOnError false
+            }
+        }
         }
     }
-}
+
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.0'
