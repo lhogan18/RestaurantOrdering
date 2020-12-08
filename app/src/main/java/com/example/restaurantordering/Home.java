@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.view.ViewGroup;
@@ -135,10 +136,34 @@ public class Home extends AppCompatActivity {
         return true;
     }
 
+    /////////// need to change cart intent to cart class
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch(item.getItemId()){
+            case R.id.MenuID:
+                Toast.makeText(this, "Menu is Clicked", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(this, Home.class));
+                return true;
+            case R.id.LogOutID:
+                Toast.makeText(this, "Logout is Clicked", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(this, MainActivity.class));
+                return true;
+
+            case R.id.CartID:
+                Toast.makeText(this, "Cart is Clicked", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(this, MainActivity.class));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
 }
