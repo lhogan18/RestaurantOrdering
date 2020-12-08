@@ -8,15 +8,21 @@
         <item
             android:id="@+id/MenuID"
             android:icon="@drawable/ic_baseline_menu_book_24"
-            android:title="Order" />
+            android:title="Menu"
+            android:onClick="onOptionsItemSelected"
+
+            />
         <item
             android:id="@+id/CartID"
             android:icon="@drawable/ic_baseline_shopping_cart_24"
-            android:title="Cart" />
+            android:title="Cart"
+            android:onClick="onOptionsItemSelected"
+            />
         <item
             android:id="@+id/LogOutID"
             android:icon="@drawable/ic_baseline_assignment_24"
-            android:title="Log out" />
-
+            android:title="Log out"
+            android:onClick="onOptionsItemSelected"
+            />
     </group>
 </menu>
