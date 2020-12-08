@@ -136,7 +136,7 @@ public class Home extends AppCompatActivity {
         return true;
     }
 
-    /////////// need to change cart intent to cart class
+    /////////// need to change cart intent to cart class and remove toast messages
 
     public boolean onOptionsItemSelected(MenuItem item){
         switch(item.getItemId()){
@@ -145,7 +145,7 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(this, Home.class));
                 return true;
             case R.id.LogOutID:
-                Toast.makeText(this, "Logout is Clicked", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Logging out", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(this, MainActivity.class));
                 return true;
 
